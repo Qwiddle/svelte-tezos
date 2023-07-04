@@ -33,6 +33,7 @@
 		"@sveltejs/package": "^2.0.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
+		"buffer": "^6.0.3",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
@@ -48,5 +49,12 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@airgap/beacon-sdk": "^4.0.4",
+		"@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+		"@taquito/beacon-wallet": "^17.0.0",
+		"@taquito/taquito": "^17.0.0",
+		"vite-compatible-readable-stream": "^3.6.1"
+	}
 }
