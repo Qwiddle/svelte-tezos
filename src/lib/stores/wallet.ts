@@ -37,6 +37,8 @@ export const createStore = async ({ rpcUrl, networkType, dappName}: {
 		const activeAccount = await getActiveAccount();
 		if (activeAccount) {
 			setUserAddress(activeAccount.address);
+			connected.set(true);
+			loading.set(false);
 		}
 
 		network.set(networkType);
