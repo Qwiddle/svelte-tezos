@@ -33,7 +33,6 @@ export const createStore = async ({ rpcUrl, networkType, dappName}: {
 		});
 
 		Tezos.setWalletProvider(beacon);
-		subscribeToHead();
 		
 		network.set(networkType);
 		rpc.set(rpcUrl);
