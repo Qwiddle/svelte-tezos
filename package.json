@@ -1,6 +1,7 @@
 {
 	"name": "svelte-tezos",
 	"version": "1.0.2",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
