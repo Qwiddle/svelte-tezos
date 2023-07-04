@@ -33,8 +33,12 @@ export const createStore = async ({ rpcUrl, networkType, dappName}: {
 		});
 
 		Tezos.setWalletProvider(beacon);
-		subscribeToHead();
-		
+
+		const activeAccount = await getActiveAccount();
+		if (activeAccount) {
+			setUserAddress(activeAccount.address);
+		}
+
 		network.set(networkType);
 		rpc.set(rpcUrl);
 	} catch (e) {
@@ -45,7 +49,7 @@ export const createStore = async ({ rpcUrl, networkType, dappName}: {
 export const connect = async () => {
 	try {
 		const activeAccount = await getActiveAccount();
-		if(!activeAccount) {
+		if (!activeAccount) {
 			await watchAccountPermissionRequest();
 		} else {
 			setUserAddress(activeAccount.address)
