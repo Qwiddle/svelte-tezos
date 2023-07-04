@@ -1,58 +1,24 @@
-# create-svelte
+# svelte-tezos
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+`svelte-tezos` is a svelte store with multiple helper functions to ease the connection between svelte and the tezos `@taquito/taquito` library.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+available functions:
+1. `createStore({ rpcUrl, networkType, dappName})` - initialized TezosToolkit & BeaconWallet and the svelte store
+2. `connect()` - requests and waits for a connection through beacon
+3. `disconnect()` - clears any active account through beacon
 
-## Creating a project
+accessible via store:
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. `userAddress` - address of the currently active account
+2. `connected` - boolean indicating if wallet is paired or not
+3. `blockHead` - current block height, hash, and timestamp
+4. `network` - current network (mainnet, ghostnet, etc)
+5. `rpc` - currently connected RPC
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## examples
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+coming soon
 
-## Developing
+## usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+coming soon
